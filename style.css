@@ -1,77 +1,137 @@
+/* Def tamanho de fonte padrão */
+html {
+  font-size: 16px;
+}
+
+/* responsividade para telas maiores */
+@media screen and (min-width: 769px) {
+  #landing-page {
+    height: 50vh;
+  }
+  
+  #landing-page h1 {
+    font-size: 4rem;
+  }
+
+  #landing-page p {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+/* responsividade para telas menores */
+@media screen and (max-width: 768px) {
+  #landing-page {
+    height: 70vh;
+  }
+
+  #landing-page h1 {
+    font-size: 3rem;
+  }
+
+  #landing-page p {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 8px;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #landing-page {
+    height: 80vh;
+  }
+
+  #landing-page h1 {
+    font-size: 2rem;
+  }
+
+  #landing-page p {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 2px;
+  }
+}
+
+/* Estilos comuns para todos os tamanhos de tela */
 #landing-page {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #landing-page h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
+  font-weight: bold;
+  color: #fff;
 }
 
 #landing-page p {
-    font-size: 2rem;
-    color: #fff;
+  color: #fff;
 }
 
 button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  font-weight: bold;
+  background-color: #121111;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0062cc;
+  background-color: #61080a;
 }
 
 .hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  }
-  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 iframe {
-    width: 100vw;
-    height: 100vh;
-    border: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
 }
 
 .background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  .background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .logo {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 30px;
-  }
-  
-  .logo img {
-    width: 200px;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 200px;
+}

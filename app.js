@@ -49,3 +49,47 @@ window.onload = function() {
     iframeDocentes.style.display = 'none';
 }
 
+// Obter o elemento iframe
+const iframe = document.querySelector('#iframe-alunos');
+
+// Adicionar um ouvinte de eventos de scroll à página
+window.addEventListener('scroll', () => {
+    // Obter a posição do scroll da página
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Atualizar a posição do scroll do iframe com a posição do scroll da página
+    iframe.contentWindow.scrollTo(0, scrollTop);
+    const contentHeight = iframe.contentDocument.body.scrollHeight;
+    iframe.style.height = contentHeight + 'px';
+
+});
+
+// Função para sincronizar o scroll da página com o scroll do iframe
+function syncScroll() {
+    const iframe = document.querySelector('#iframe-alunos');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    iframe.contentWindow.scrollTo(0, scrollTop);
+}
+
+// Chamar a função de sincronização sempre que o iframe for carregado
+iframe.addEventListener('load', () => {
+    syncScroll();
+});
+
+// Adicionar um ouvinte de eventos de scroll à página
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Atualizar a altura do iframe para o tamanho do conteúdo
+    const contentHeight = iframe.contentDocument.body.scrollHeight;
+    iframe.style.height = contentHeight + 'px';
+
+    // Atualizar a posição do scroll do iframe com a posição do scroll da página
+    iframe.contentWindow.scrollTo(0, scrollTop);
+});
+
+// Chamar a função de sincronização sempre que o iframe for carregado
+iframe.addEventListener('load', () => {
+    syncScroll();
+});
+
