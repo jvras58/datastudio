@@ -129,7 +129,6 @@ iframe {
   height: 100%;
   object-fit: cover;
 }
-
 .logo {
   position: absolute;
   bottom: 0;
@@ -140,6 +139,20 @@ iframe {
 
 .logo img {
   width: 200px;
+  height: auto;
+  image-rendering: crisp-edges;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
 }
 
 /* Slides seção */
