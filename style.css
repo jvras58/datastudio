@@ -73,6 +73,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  
 }
 
 #landing-page h1 {
@@ -134,4 +135,83 @@ iframe {
 
 .logo img {
   width: 200px;
+}
+
+/* Slides seção */
+.slides-section {
+  margin: 50px 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+/* Botões seguinte e anterior */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* "botão próximo" à direita */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preta com um pouco de transparência */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Texto da legenda desativado por enquanto */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Recipiente de pontos */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* os pontos */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* cor de fundo ao ponto ativo */
+.active, .dot:hover {
+  background-color: #5c0404;
 }

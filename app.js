@@ -93,3 +93,47 @@ iframe.addEventListener('load', () => {
     syncScroll();
 });
 
+// Roteiro da apresentação 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Controles próximos/anteriores
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Controles de imagem em miniatura
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+// Apresentação de slides automática
+var slideTimer = setInterval(function() { plusSlides(1) }, 4000);
+
+// Pausar apresentação de slides ao passar o mouse sobre ela
+var slideshow = document.getElementsByClassName("slideshow-container")[0];
+slideshow.addEventListener("mouseover", function() { clearInterval(slideTimer) });
+
+// Retomar a apresentação de slides quando não estiver passando o mouse sobre ela
+slideshow.addEventListener("mouseout", function() { 
+    slideTimer = setInterval(function() { plusSlides(1) }, 4000);
+  });
+  
+
+
