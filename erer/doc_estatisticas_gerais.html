@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ERER</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard ERER">
+    <meta name="author" content="UFPE">
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+    <!-- App CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+  </head>
+  <body class="app">
+  	<!--
+	<div class="background-image">
+		<img src="assets/images/fundo.png" alt="background">
+	</div>  	
+	-->
+    <header class="app-header fixed-top">
+      <div class="app-header-inner">
+        <div class="container-fluid py-2">
+          <div class="app-header-content">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto">
+                <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img">
+                    <title>Menu</title>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
+                  </svg>
+                </a>
+              </div>
+              <!--//col-->
+            </div>
+            <!--//row-->
+          </div>
+          <!--//app-header-content-->
+        </div>
+        <!--//container-fluid-->
+      </div>
+      <!--//app-header-inner-->
+      <div id="app-sidepanel" class="app-sidepanel">
+        <div id="sidepanel-drop" class="sidepanel-drop"></div>
+        <div class="sidepanel-inner d-flex flex-column">
+          <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+          <div class="app-branding">
+            <a class="app-logo" href="index.html">
+              <img class="logo-icon me-2" src="assets/images/logo-ct.png" alt="logo">
+              <span class="logo-text">ERER</span>
+            </a>
+          </div>
+          <!--//app-branding-->
+          <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+            <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+              <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link" href="index.html">
+                  <span class="nav-icon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+                      <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                    </svg>
+                  </span>
+                  <span class="nav-link-text">Início</span>
+                </a>
+                <!--//nav-link-->
+              </li>
+              <!--//nav-item-->
+              <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+                  <span class="nav-icon">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <i class="fa-solid fa-user-graduate"></i>
+                  </span>
+                  <span class="nav-link-text">Discente</span>
+                  <span class="submenu-arrow">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                  </span>
+                  <!--//submenu-arrow-->
+                </a>
+                <!--//nav-link-->
+                <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+                  <ul class="submenu-list list-unstyled">
+                    <li class="submenu-item">
+                      <a class="submenu-link" href="disc_estatisticas_gerais.html"><i class="fa-solid fa-chart-simple"></i> Estatísticas Gerais</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a class="submenu-link" href="disc_curva_coeficiente.html"><i class="fa-solid fa-chart-line"></i> Curva de Coeficiente</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a class="submenu-link" href="disc_curva_temporal.html"><i class="fa-solid fa-chart-bar"></i> Curva Temporal</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!--//nav-item-->
+              <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
+                  <span class="nav-icon">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                  </span>
+                  <span class="nav-link-text">Docente</span>
+                  <span class="submenu-arrow">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                  </span>
+                  <!--//submenu-arrow-->
+                </a>
+                <!--//nav-link-->
+                <div id="submenu-2" class="collapse submenu submenu-2" data-bs-parent="#menu-accordion">
+                  <ul class="submenu-list list-unstyled">
+                    <li class="submenu-item">
+                      <a class="submenu-link active" href="doc_estatisticas_gerais.html"><i class="fa-solid fa-chart-simple"></i> Estatísticas Gerais</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!--//nav-item-->
+              <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link" href="https://sites.ufpe.br/observatorioacoesafirmativas/" target="_blank">
+                  <span class="nav-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </span>
+                  <span class="nav-link-text">Sobre nós</span>
+                </a>
+                <!--//nav-link-->
+              </li>
+              <!--//nav-item-->
+            </ul>
+            <!--//app-menu-->
+          </nav>
+          <!--//app-nav-->
+        </div>
+        <!--//sidepanel-inner-->
+      </div>
+      <!--//app-sidepanel-->
+    </header>
+    <!--//app-header-->
+    <div class="app-wrapper">
+      <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">
+          <!--//app-card-->
+
+
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-12">
+              <div class="app-card app-card-chart h-100 shadow-sm">
+                <div class="app-card-header p-3">
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                      <h4 class="app-card-title">Dashboard de Estatísticas Gerais de Docentes</h4>
+                    </div>
+                    <!--//col-->
+                  </div>
+                  <!--//row-->
+                </div>
+                <!--//app-card-header-->
+              </div>
+              <!--//app-card-->
+            </div>
+            <!--//col-->
+          </div>
+          <!--//row-->
+
+
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-12">
+              <div class="h-100 w-100 shadow-sm">
+                <div class="p-3">
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col-auto iframeContainer">
+                 
+                      <iframe id="iframe-ERER" data-src="https://lookerstudio.google.com/embed/reporting/1d8bbb99-561e-47c0-ada3-48264651e940/page/p_edh9z6lv3c" frameborder="0"></iframe>                    
+
+                    </div>
+                    <!--//col-->
+                  </div>
+                  <!--//row-->
+                </div>
+                <!--//app-card-header-->
+              </div>
+              <!--//app-card-->
+            </div>
+            <!--//col-->
+          </div>
+          <!--//row-->
+        </div>
+        <!--//container-fluid-->
+      </div>
+      <!--//app-content-->
+      <footer class="app-footer">
+        <div class="container text-center py-3">
+          <small class="copyright">ERER - UFPE</small>
+        </div>
+      </footer>
+      <!--//app-footer-->
+    </div>
+    <!--//app-wrapper-->
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/js/app.js"></script>
+  
+    <script type="text/javascript">
+        const iframeERER = document.querySelector('#iframe-ERER');
+        // Carregar o iframe quando a página carregar
+        window.addEventListener('load', () => {
+          iframeERER.setAttribute('src', iframeERER.getAttribute('data-src'));
+        });
+    </script>
+  </body>
+</html>
