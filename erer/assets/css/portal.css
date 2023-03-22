@@ -10558,7 +10558,7 @@ button.close:focus {
 .app-header {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #e7e9ed;
-  height: 56px;
+  height: 70px;
   background: #440c15;
 }
 .app-header-inner {
@@ -10856,7 +10856,6 @@ button.close:focus {
 .app-nav .nav-link.active {
   color: #440c15;
   background: #edfdf6;
-  border-left: 3px solid #440c15;
   font-weight: 500;
 }
 .app-nav .nav-link.submenu-toggle.active {
@@ -11563,4 +11562,40 @@ iframe {
     width: 100% !important;
     height: 100% !important;
     border: 0 !important;
+}
+
+.logo-text {
+    color: #fff;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/*  CSS TEXTO LOGO  */
+
+@media (min-width: 100px) { 
+  .logo-text{
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 450px) { 
+  .logo-text{
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (min-width: 576px) { 
+  .logo-text{
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) { 
+  .logo-text{
+    font-size: 1.5rem;
+  }  
 }
