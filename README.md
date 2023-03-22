@@ -4,7 +4,7 @@
 
 | Ferramenta         | Versão     | Descrição                                             |
 | ------------------ | ---------- | ----------------------------------------------------- |
-| HTMM               | -          |                padrão                                 |
+| HTML               | -          |                padrão                                 |
 | CCS                | -          |                padrão                                 |
 | Bootstrap          | -          |               framework web                           |
 | Google datastudio  | -          |ferramenta para criação de relatórios e painéis        |
