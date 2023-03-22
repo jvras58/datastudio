@@ -4,10 +4,10 @@
 
 | Ferramenta         | Versão     | Descrição                                             |
 | ------------------ | ---------- | ----------------------------------------------------- |
-| HTML               | -          |                padrão                                 |
-| CCS                | -          |                padrão                                 |
-| Bootstrap          | -          |               framework web                           |
-| Google datastudio  | -          |ferramenta para criação de relatórios e painéis        |
+| HTML               | -          |                Padrão                                 |
+| CCS                | -          |                Padrão                                 |
+| Bootstrap          | -          |               Framework web                           |
+| Google datastudio  | -          |    Ferramenta para criação de relatórios e painéis    |
 | Git                | -          |            Controle de versões                        |
 | Linux / Windows 10 | -          |            Sistema operacional                        |
 
